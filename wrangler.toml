@@ -4,3 +4,11 @@ compatibility_date = "2022-12-13"
 
 [triggers]
 crons = ["1 * * * *"]
+
+[vars]
+BASE_URL = "https://botsin.space/"
+
+# [secrets]
+# CLIENT_KEY
+# CLIENT_SECRET
+# ACCESS_TOKEN
