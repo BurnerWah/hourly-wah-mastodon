@@ -9,6 +9,9 @@
     "format": "prettier --cache --ignore-unknown --write .",
     "lint:eslint": "eslint --cache --max-warnings=0 ."
   },
+  "dependencies": {
+    "megalodon": "^5.0.0"
+  },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20221111.1",
     "@typescript-eslint/eslint-plugin": "^5.46.1",
