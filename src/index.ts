@@ -1,14 +1,4 @@
-/**
- * Welcome to Cloudflare Workers! This is your first scheduled worker.
- *
- * - Run `wrangler dev --local` in your terminal to start a development server
- * - Run `curl "http://localhost:8787/cdn-cgi/mf/scheduled"` to trigger the scheduled event
- * - Go back to the console to see what your worker has logged
- * - Update the Cron trigger in wrangler.toml (see https://developers.cloudflare.com/workers/wrangler/configuration/#triggers)
- * - Run `wrangler publish --name my-worker` to publish your worker
- *
- * Learn more at https://developers.cloudflare.com/workers/runtime-apis/scheduled-event/
- */
+import { login } from 'masto'
 
 export default {
   async scheduled(
@@ -16,6 +6,26 @@ export default {
     env: Bindings,
     ctx: ExecutionContext,
   ): Promise<void> {
-    console.log(`Hello World!`)
+    const masto = await login({
+      url: env.BASE_URL,
+      accessToken: env.ACCESS_TOKEN,
+    })
+    const tinyfoxApiRes = await fetch(
+      `https://api.tinyfox.dev/img?animal=wah&json`,
+    )
+    const tinyfoxApiData: TinyfoxAPIResponse = await tinyfoxApiRes.json()
+    const image = await fetch(`https://api.tinyfox.dev${tinyfoxApiData.loc}`)
+    const media = await masto.v2.mediaAttachments.create({
+      file: await image.blob(),
+      description: 'An image of a red panda',
+    })
+    const status = await masto.v1.statuses.create({
+      mediaIds: [media.id],
+      status: 'Wah',
+      spoilerText: 'A red panda posted by a bot',
+      sensitive: true,
+      visibility: 'unlisted',
+    })
+    console.log(`Posted status: ${status.url}`)
   },
 }

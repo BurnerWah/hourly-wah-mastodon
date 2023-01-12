@@ -1,9 +1,11 @@
 name = "tinyfox-mastodon"
 main = "src/index.ts"
 compatibility_date = "2022-12-13"
+node_compat = true
+# minify = true
 
 [triggers]
-crons = ["1 * * * *"]
+crons = ["30 * * * *"]
 
 [vars]
 BASE_URL = "https://botsin.space/"

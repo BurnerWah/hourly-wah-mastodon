@@ -1,15 +1,41 @@
 interface Bindings {
-  // Example binding to KV. Learn more at https://developers.cloudflare.com/workers/runtime-apis/kv/
-  // MY_KV_NAMESPACE: KVNamespace;
-  //
-  // Example binding to Durable Object. Learn more at https://developers.cloudflare.com/workers/runtime-apis/durable-objects/
-  // MY_DURABLE_OBJECT: DurableObjectNamespace;
-  //
-  // Example binding to R2. Learn more at https://developers.cloudflare.com/workers/runtime-apis/r2/
-  // MY_BUCKET: R2Bucket;
-
   BASE_URL: string
   CLIENT_KEY: string
   CLIENT_SECRET: string
   ACCESS_TOKEN: string
 }
+
+interface TinyfoxAPIResponse {
+  loc: string
+  remaining_api_calls: string
+}
+
+type TynyfoxAnimal =
+  | 'fox'
+  | 'yeen'
+  | 'dog'
+  | 'manul'
+  | 'snek'
+  | 'poss'
+  | 'leo'
+  | 'serval'
+  | 'bleat'
+  | 'shiba'
+  | 'racc'
+  | 'dook'
+  | 'ott'
+  | 'snep'
+  | 'woof'
+  | 'chi'
+  | 'capy'
+  | 'bear'
+  | 'bun'
+  | 'caracal'
+  | 'puma'
+  | 'mane'
+  | 'marten'
+  | 'tig'
+  | 'wah'
+  | 'skunk'
+  | 'jaguar'
+  | 'yote'
