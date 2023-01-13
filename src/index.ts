@@ -24,7 +24,7 @@ export default {
       status: 'Wah',
       spoilerText: 'A red panda posted by a bot',
       sensitive: true,
-      visibility: 'unlisted',
+      visibility: 'public',
     })
     console.log(`Posted status: ${status.url}`)
   },
