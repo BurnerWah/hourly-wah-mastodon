@@ -14,6 +14,7 @@
     "masto": "^5.4.0"
   },
   "devDependencies": {
+    "@burnerwah/tsconfig-cloudflare": "^1.0.2",
     "@cloudflare/workers-types": "^4.20221111.1",
     "@typescript-eslint/eslint-plugin": "^5.48.1",
     "@typescript-eslint/parser": "^5.48.1",

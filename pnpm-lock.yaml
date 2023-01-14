@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@burnerwah/tsconfig-cloudflare': ^1.0.2
   '@cloudflare/workers-types': ^4.20221111.1
   '@typescript-eslint/eslint-plugin': ^5.48.1
   '@typescript-eslint/parser': ^5.48.1
@@ -15,6 +16,7 @@ dependencies:
   masto: 5.4.0
 
 devDependencies:
+  '@burnerwah/tsconfig-cloudflare': 1.0.2
   '@cloudflare/workers-types': 4.20221111.1
   '@typescript-eslint/eslint-plugin': 5.48.1_3jon24igvnqaqexgwtxk6nkpse
   '@typescript-eslint/parser': 5.48.1_iukboom6ndih5an6iafl45j2fe
@@ -25,6 +27,10 @@ devDependencies:
   wrangler: 2.7.1
 
 packages:
+
+  /@burnerwah/tsconfig-cloudflare/1.0.2:
+    resolution: {integrity: sha512-XK7GSx5p71a6uHCVyZkPjZCP1VGzQbDPUQiNlojB4bMIh0LSrjcZBEalHiGN5B5xEEEE5pAKKz4Rzzba41mO3g==}
+    dev: true
 
   /@cloudflare/kv-asset-handler/0.2.0:
     resolution: {integrity: sha512-MVbXLbTcAotOPUj0pAMhVtJ+3/kFkwJqc5qNOleOZTv6QkZZABDMS21dSrSlVswEHwrpWC03e4fWytjqKvuE2A==}
