@@ -11,7 +11,7 @@
   },
   "packageManager": "pnpm@7.25.0",
   "dependencies": {
-    "masto": "^5.3.0"
+    "masto": "^5.4.0"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20221111.1",
@@ -19,7 +19,7 @@
     "@typescript-eslint/parser": "^5.48.1",
     "eslint": "^8.31.0",
     "eslint-config-prettier": "^8.6.0",
-    "prettier": "^2.8.2",
+    "prettier": "^2.8.3",
     "typescript": "^4.9.4",
     "wrangler": "2.7.1"
   }
