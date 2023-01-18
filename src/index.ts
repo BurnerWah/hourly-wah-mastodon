@@ -14,14 +14,17 @@ export default {
       `https://api.tinyfox.dev/img?animal=wah&json`,
     )
     const tinyfoxApiData: TinyfoxAPIResponse = await tinyfoxApiRes.json()
-    const image = await fetch(`https://api.tinyfox.dev${tinyfoxApiData.loc}`)
+    const imageUrl = `https://api.tinyfox.dev${tinyfoxApiData.loc}`
+    const image = await fetch(imageUrl)
     const media = await masto.v2.mediaAttachments.create({
       file: await image.blob(),
       description: 'An image of a red panda',
     })
     const status = await masto.v1.statuses.create({
       mediaIds: [media.id],
-      status: 'Wah',
+      status: `Wah
+
+Source: ${imageUrl}`,
       spoilerText: 'A red panda posted by a bot',
       sensitive: true,
       visibility: 'public',
