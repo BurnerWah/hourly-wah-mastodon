@@ -9,7 +9,7 @@
     "format": "prettier --cache --ignore-unknown --write .",
     "lint:eslint": "eslint --cache --max-warnings=0 ."
   },
-  "packageManager": "pnpm@7.26.3",
+  "packageManager": "pnpm@7.27.0",
   "dependencies": {
     "masto": "^5.4.0"
   },
