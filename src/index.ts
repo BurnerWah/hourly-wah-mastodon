@@ -25,9 +25,7 @@ export default {
       status: `Wah
 
 Source: ${imageUrl}`,
-      spoilerText: 'A red panda posted by a bot',
-      sensitive: true,
-      visibility: 'public',
+      visibility: 'unlisted',
     })
     console.log(`Posted status: ${status.url}`)
   },
