@@ -10,6 +10,9 @@ crons = ["30 * * * *"]
 [vars]
 BASE_URL = "https://botsin.space/"
 
+[placement]
+mode = "smart"
+
 # [secrets]
 # CLIENT_KEY
 # CLIENT_SECRET
