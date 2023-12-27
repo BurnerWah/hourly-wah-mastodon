@@ -1,4 +1,4 @@
-import { login } from 'masto'
+import { createRestAPIClient } from 'masto'
 
 export default {
   async scheduled(
@@ -6,7 +6,7 @@ export default {
     env: Bindings,
     ctx: ExecutionContext,
   ): Promise<void> {
-    const masto = await login({
+    const masto = createRestAPIClient({
       url: env.BASE_URL,
       accessToken: env.ACCESS_TOKEN,
     })
@@ -16,7 +16,7 @@ export default {
     const tinyfoxApiData: TinyfoxAPIResponse = await tinyfoxApiRes.json()
     const imageUrl = `https://api.tinyfox.dev${tinyfoxApiData.loc}`
     const image = await fetch(imageUrl)
-    const media = await masto.v2.mediaAttachments.create({
+    const media = await masto.v2.media.create({
       file: await image.blob(),
       description: 'An image of a red panda',
     })
