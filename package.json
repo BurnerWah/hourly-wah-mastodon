@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "wrangler dev",
-    "deploy": "wrangler publish",
+    "deploy": "wrangler deploy",
     "format": "prettier --cache --ignore-unknown --write .",
     "lint:eslint": "eslint --cache --max-warnings=0 ."
   },
