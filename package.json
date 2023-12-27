@@ -11,7 +11,7 @@
   },
   "packageManager": "pnpm@8.5.0",
   "dependencies": {
-    "masto": "^5.11.3"
+    "masto": "^6.0.0"
   },
   "devDependencies": {
     "@burnerwah/tsconfig-cloudflare": "^1.0.2",
